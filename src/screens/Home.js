@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
 import "aos/dist/aos.css"
@@ -6,8 +6,6 @@ import Navbar from '../components/nav'
 import Footer from '../components/footer'
 
 const Home = () => {
-    const [widget, setWidget] = useState(false)
-
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, [])
@@ -25,7 +23,7 @@ const Home = () => {
                             <Link to="/schedule_session" className="button" data-aos="zoom-in">Launch Now</Link>
                         </div>
                     </div>
-                    <div className={widget ? "widget active" : "widget"} onMouseEnter={setWidget(true)} onMouseLeave={() => setWidget(false)}>
+                    <div className="widget">
                         <div className="trigger">
                             <h1>Need Help?</h1>
                         </div>

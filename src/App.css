@@ -207,9 +207,9 @@ header .widget {
     position: absolute;
     width: 260px;
     height: 260px;
-    right: 185px;
+    right: 0;
     top: 300px;
-    transition: 1s linear;
+    transition: 0.5s linear;
     /* background-color:aquamarine; */
     /* text-align: unset !important; */
     /* display: flex; */
