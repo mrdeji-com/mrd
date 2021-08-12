@@ -33,7 +33,7 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-                    {/* <div className={widget ? 'widget-active' : 'widget'} onMouseEnter={() => setWidget(true)} onMouseLeave={() => setWidget(false)}>
+                    <div className={widget ? 'widget-active' : 'widget'} onMouseEnter={() => setWidget(true)} onMouseLeave={() => setWidget(false)}>
                         <div className="trigger">
                             <h1>Need Help?</h1>
                         </div>
@@ -54,7 +54,7 @@ const Home = () => {
                                 </span>
                             </Link>
                         </div>
-                    </div> */}
+                    </div>
                 </header>
                 {/* begin  */}
                 <section className="begin">

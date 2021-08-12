@@ -1503,6 +1503,11 @@ max-height: 900px  !important;
         font-size: 15px;
     }
 
+    /* widget  */
+    .widget {
+        display: none;
+    }
+
     .p-100 {
       padding-top: 0px;
     }
@@ -1761,6 +1766,11 @@ max-height: 900px  !important;
         color: white;
         margin-bottom: 15px;
         font-size: 15px;
+    }
+
+    /* widget  */
+    .widget {
+        display: none;
     }
 
     /* begin  */
