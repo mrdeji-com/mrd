@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/nav'
 import Footer from '../components/footer'
 import ServiceSlider from '../components/serviceSlider';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const DigitalContent = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
         <div class="container-fluid">
             <Navbar />
@@ -13,18 +19,17 @@ const DigitalContent = () => {
                 <section className="service-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 col-md-6 service-left">
+                            <div className="col-lg-6 col-md-6 service-left" data-aos="fade-right">
                                 <img src={require("../img/content2.png").default} className="img-fluid" alt="img" />
                                 <div className="header">
                                     <h1><span className="emphasis">Digital Content</span></h1>
                                     <div className="row">
                                         <p>Lets help you scale up with our proficiency in creating</p>
                                     </div>
-                                    <Link to="/schedule_session" className="button">Schedule a Strategy Session with us</Link>
-                                    {/* <button className="button">Schedule a Strategy Session with us</button> */}
+                                    <Link to="/schedule_session" className="button" data-aos="zoom-in">Schedule a Strategy Session with us</Link>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-6 service-information">
+                            <div className="col-lg-6 col-md-6 service-information" data-aos="fade-left">
                                 <p>Do you already have a website or other digital asset project ideas such as Corporate Profile,
                                     Brochures and Power Point
                                     presentation design requirements but lack adequate content to bring those assets into

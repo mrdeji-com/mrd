@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/nav'
 import Footer from '../components/footer'
 import ServiceSlider from '../components/serviceSlider';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const WebApplicationDevelopment = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
         <div class="container-fluid">
             <Navbar />
@@ -13,17 +19,17 @@ const WebApplicationDevelopment = () => {
                 <section className="service-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 col-md-6 service-left">
+                            <div className="col-lg-6 col-md-6 service-left" data-aos="fade-right">
                                 <img src={require("../img/programming (2) 2.png").default} className="img-fluid" alt="alt" />
                                 <div className="header">
                                     <h1><span className="emphasis">Web Application Development</span></h1>
                                     <div className="row">
                                         <p>Engage us to interpret your next Web Application development program</p>
                                     </div>
-                                    <Link to="/schedule_session" className="button">Engage us Now</Link>
+                                    <Link to="/schedule_session" className="button" data-aos="zoom-in">Engage us Now</Link>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-6 service-information">
+                            <div className="col-lg-6 col-md-6 service-information" data-aos="fade-left">
                                 <p>
                                     We develop web applications that give your business significant leap over competition. We do
                                     hope that you recognize

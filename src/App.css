@@ -591,7 +591,8 @@ footer .social-media a img {
 .frameworks .card h6 {
     margin-bottom:15px;
     font-size: 10px;
-    color: white
+    color: white;
+    text-align: center;
 }
 
 .frameworks .card i {

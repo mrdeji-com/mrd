@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/nav'
 import Footer from '../components/footer'
 import ServiceSlider from '../components/serviceSlider';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const CoorporateDesign = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
         <div class="container-fluid">
             <Navbar />
@@ -13,7 +19,7 @@ const CoorporateDesign = () => {
                 <section className="service-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 col-md-6 service-left">
+                            <div className="col-lg-6 col-md-6 service-left" data-aos="fade-right">
                                 <img src={require("../img/logo-design 2.png").default} className="img-fluid" alt="alt" />
                                 <div className="header">
                                     <h1><span className="emphasis">Corporate Design Services</span></h1>
@@ -21,10 +27,10 @@ const CoorporateDesign = () => {
                                         <p>You do not want your brand to be misinterpreted! Let’s help you communicate your
                                             brand professionally</p>
                                     </div>
-                                    <Link to="/schedule_session" className="button">Schedule a Strategy Session with us</Link>
+                                    <Link to="/schedule_session" className="button" data-aos="zoom-in">Schedule a Strategy Session with us</Link>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-6 service-information">
+                            <div className="col-lg-6 col-md-6 service-information" data-aos="fade-left">
                                 <p>
                                     We see a high demand from organisations on their need to standardize brand style with other
                                     marketing collaterals within

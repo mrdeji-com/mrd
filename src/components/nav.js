@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
+    const [number, setNumber] = useState("0700MRDEJI0")
+
+    const changeNumber = () => {
+        setTimeout(() => {
+            if (number === "0700MRDEJI0") {
+                setNumber("07006733540");
+            } else {
+                setNumber("0700MRDEJI0")
+            }
+        }, 5000)
+    }
+
+    useEffect(() => {
+        changeNumber()
+    })
+
     window.addEventListener("scroll", () => {
         if (window.pageYOffset > 100) {
             document.querySelector('.logo').style.height = "40px"
@@ -231,7 +247,7 @@ const Nav = () => {
                     <li className="nav-item">
                         <Link to="schedule_session" className="nav-link">Schedule Session</Link>
                     </li>
-                    <h1><a href="https://chatwith.io/s/mrdeji-com" target="_blank">0700MRDEJI0</a></h1>
+                    <h1><a href="https://chatwith.io/s/mrdeji-com" target="_blank">{number}</a></h1>
                 </ul>
             </div>
         </nav>

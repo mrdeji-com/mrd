@@ -66,23 +66,22 @@ const Services = () => {
                         <p>to manage your upfront investment</p>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering1(true)} onMouseLeave={() => setIsOvering1(false)} onClick={() => {
-                                    setModal1(true)
-                                    setIsOvering1(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering1(true)} onMouseLeave={() => setIsOvering1(false)}>
                                     {isHovering1 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal1(true)
+                                            setIsOvering1(false)
+                                        }}>
                                             <h4>Education/E-Learning Portals</h4>
                                             <p>Setup a session with our team to share our global insights on banking for all generations and the evolution of the New World banking platforms</p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Education/E-Learning Portals</h3>
                                             <img src={require("../img/mortarboard 2.png").default} alt="img" />
                                         </>}
                                     <Modal isOpen={modal1} onRequestClose={() => setModal1(false)} className="services-modal">
-                                        <i className="fas fa-times" id="close" onClick={() => setModal1(false)} />
                                         <div className="services-modal-content">
                                             <img src={require("../img/mortarboard 2.png").default} alt="img" />
                                             <h1>Education/E-Learning Portals</h1>
@@ -101,17 +100,17 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering2(true)} onMouseLeave={() => setIsOvering2(false)} onClick={() => {
-                                    setModal2(true)
-                                    setIsOvering2(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering2(true)} onMouseLeave={() => setIsOvering2(false)} >
                                     {isHovering2 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal2(true)
+                                            setIsOvering2(false)
+                                        }}>
                                             <h4>Global Trade Portals</h4>
                                             <p>If you run international trade business that connect your products and services with a wide array of sellers and partners, we have developed frameworks to power your initiative and give your business the right customization and operational support that it needs to thrive.</p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Global Trade Portals</h3>
                                             <img src={require("../img/exchange-rate 1.png").default} alt="img" />
@@ -136,17 +135,17 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6  col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering3(true)} onMouseLeave={() => setIsOvering3(false)} onClick={() => {
-                                    setModal3(true)
-                                    setIsOvering3(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering3(true)} onMouseLeave={() => setIsOvering3(false)} >
                                     {isHovering3 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal3(true)
+                                            setIsOvering3(false)
+                                        }}>
                                             <h4>Health Management Portals</h4>
                                             <p>If you are in the business of saving lives, you will also love to save your own life and that of your health and administrative staffs with the digitization of day-to-day front and back-office health management operations.</p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Health Management Portals</h3>
                                             <img src={require("../img/health-insurance 1.png").default} alt="img" />
@@ -171,18 +170,18 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering4(true)} onMouseLeave={() => setIsOvering4(false)} onClick={() => {
-                                    setModal4(true)
-                                    setIsOvering4(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering4(true)} onMouseLeave={() => setIsOvering4(false)} >
                                     {isHovering4 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal4(true)
+                                            setIsOvering4(false)
+                                        }}>
                                             <h4>Administrative Portals</h4>
                                             <p>Your enterprise has faced many setbacks due to the lack of adequate decision to implement strategic and comprehensive digital initiatives. You have wished away manual roadblocks but you keep on enforcing old interests in outdated tools just to keep the lights on.
                                             </p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Administrative (Sales, HR and Accounts/Finance) Portals</h3>
                                             <img src={require("../img/leader 1.png").default} alt="img" />
@@ -206,18 +205,18 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering5(true)} onMouseLeave={() => setIsOvering5(false)} onClick={() => {
-                                    setModal5(true)
-                                    setIsOvering5(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering5(true)} onMouseLeave={() => setIsOvering5(false)} >
                                     {isHovering5 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal5(true)
+                                            setIsOvering5(false)
+                                        }}>
                                             <h4>Internet Banking Portals</h4>
                                             <p>Setup a session with our team to share our global insights on banking for all generations and the evolution of the New World banking platforms
                                             </p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Internet Banking Portals</h3>
                                             <img src={require("../img/accounting 2.png").default} alt="img" />
@@ -244,18 +243,18 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
-                                <div className="card" onMouseEnter={() => setIsOvering6(true)} onMouseLeave={() => setIsOvering6(false)} onClick={() => {
-                                    setModal6(true)
-                                    setIsOvering6(false)
-                                }}>
+                                <div className="card" onMouseEnter={() => setIsOvering6(true)} onMouseLeave={() => setIsOvering6(false)} >
                                     {isHovering6 ?
-                                        <>
+                                        <div onClick={() => {
+                                            setModal6(true)
+                                            setIsOvering6(false)
+                                        }}>
                                             <h4>Utility Management Systems Portals</h4>
                                             <p>Utility consumers have defined their appetite for technology with continuous demand for self-service systems over web and mobile devices.
                                             </p>
                                             <h6>Learn More <i class="fas fa-angle-right"></i></h6>
                                             <Link to="/schedule_session"><button>Book a Session</button></Link>
-                                        </> :
+                                        </div> :
                                         <>
                                             <h3>Utility Management Systems Portals</h3>
                                             <img src={require("../img/pie 2.png").default} alt="img" />
@@ -315,7 +314,6 @@ const Services = () => {
                                     we are open for new opportunities to accelerate our offering to clients.</p>
                                 <div>
                                     <Link to="/partner" className="button">Partner With Us</Link>
-                                    {/* <a href className="button"></a> */}
                                 </div>
                             </div>
                             <div className="col-lg-5 col-md-6">

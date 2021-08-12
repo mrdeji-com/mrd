@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ServiceSlider = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
-        <section className="service-slider">
+        <section className="service-slider" data-aos="zoom-out">
             <div className="container intro">
                 <h3>See How we help <span className="emphasis">grow your business</span></h3>
                 <p>Launch initiatives that give you competitive edge and identify untapped markets</p>

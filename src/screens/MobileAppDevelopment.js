@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/nav'
 import Footer from '../components/footer'
 import ServiceSlider from '../components/serviceSlider';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MobileAppDevelopment = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
         <div class="container-fluid">
             <Navbar />
@@ -13,17 +19,17 @@ const MobileAppDevelopment = () => {
                 <section className="service-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 col-md-6 service-left">
+                            <div className="col-lg-6 col-md-6 service-left" data-aos="fade-right">
                                 <img src={require("../img/user-interface (1) 2.png").default} className="img-fluid" alt="img" />
                                 <div className="header">
                                     <h1><span className="emphasis">Mobile App Development</span></h1>
                                     <div className="row">
                                         <p>Have you rediscovered the way to deliver services using mobile</p>
                                     </div>
-                                    <Link to="/schedule_session" className="button">Schedule a Strategy Session with us</Link>
+                                    <Link to="/schedule_session" className="button" data-aos="zoom-in">Schedule a Strategy Session with us</Link>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-6 service-information">
+                            <div className="col-lg-6 col-md-6 service-information" data-aos="fade-left">
                                 <p>
                                     Mobile users grow at astronomical rates and digital platforms are built today with mobile
                                     first in mind. If you have

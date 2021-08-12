@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import { link } from 'react-router-dom';
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";

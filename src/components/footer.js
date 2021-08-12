@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <footer data-aos="fade-up">
             <div className="container">
-                <img src={require("../img/LOGO 2 1.png").default} className="img-fluid" alt="brand-img" />
+                <Link to="/"><img src={require("../img/LOGO 2 1.png").default} className="img-fluid" alt="brand-img" /></Link>
                 <div className="row">
                     <div className="col-lg-3 col-md-4 col-sm-12 profile">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
