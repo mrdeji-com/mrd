@@ -62,6 +62,8 @@ const Services = () => {
                 {/* frameworks  */}
                 <section className="frameworks">
                     <div className="container">
+                        <h1>Utilize our engagement framework</h1>
+                        <p>to manage your upfront investment</p>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6 mb-5">
                                 <div className="card" onMouseEnter={() => setIsOvering1(true)} onMouseLeave={() => setIsOvering1(false)} onClick={() => {
@@ -80,6 +82,7 @@ const Services = () => {
                                             <img src={require("../img/mortarboard 2.png").default} alt="img" />
                                         </>}
                                     <Modal isOpen={modal1} onRequestClose={() => setModal1(false)} className="services-modal">
+                                        <i className="fas fa-times" id="close" onClick={() => setModal1(false)} />
                                         <div className="services-modal-content">
                                             <img src={require("../img/mortarboard 2.png").default} alt="img" />
                                             <h1>Education/E-Learning Portals</h1>
@@ -311,7 +314,8 @@ const Services = () => {
                                     enterprises across Africa, Europe, Asia and America, <br />
                                     we are open for new opportunities to accelerate our offering to clients.</p>
                                 <div>
-                                    <a href className="button">Partner With Us</a>
+                                    <Link to="/partner" className="button">Partner With Us</Link>
+                                    {/* <a href className="button"></a> */}
                                 </div>
                             </div>
                             <div className="col-lg-5 col-md-6">
