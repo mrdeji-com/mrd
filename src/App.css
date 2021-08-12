@@ -1524,7 +1524,7 @@ width: 900px;
 
     /* services  */
     .services {
-        height: 5420px;
+        height: 4535px;
         padding: 50px 0px
     }
 
@@ -1534,7 +1534,7 @@ width: 900px;
     }
 
     .service {
-        height: 436px;
+        /* height: 436px; */
         max-width: 365px;
         margin : 20px auto
     }
@@ -1717,7 +1717,7 @@ width: 900px;
 
     /* services  */
     .services {
-        height: 5430px;
+        height: 4760px;
         padding: 30px 0px
     }
 
@@ -1727,7 +1727,7 @@ width: 900px;
     }
 
     .service {
-        height: 438px;
+        /* height: 438px; */
         max-width: 345px;
         margin : 20px auto
     }
