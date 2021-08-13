@@ -174,7 +174,7 @@ const Join = () => {
                       Upload Resume <span className="required">*</span>
                     </label>
                     <img src="img/document-upload.svg" alt="" />
-                    <input type="file" onChange={onChange} />
+                    <input type="file" onChange={onChange} id="file" />
                   </div>
                   <div className="input">
                     <label htmlFor="letter">

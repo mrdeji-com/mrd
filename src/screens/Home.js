@@ -32,8 +32,7 @@ const Home = () => {
                                 autoplayTimeout="4000"
                                 responsiveRefreshRate="300"
                                 animateOut={true}
-                                animateIn="true"
-                                animateOut="true"
+                                animateIn={true}
                             >
                                 <div class='item'>
                                     <h1>Build digital products</h1>
@@ -41,7 +40,7 @@ const Home = () => {
                                 </div>
                                 <div class='item'>
                                     <h1>Thinking Global? You can</h1>
-                                    <h3>go really global with Digital Call to Action: Launch Now</h3>
+                                    <h3>go really global with Digital Call to Action</h3>
                                 </div>
                                 <div class='item'>
                                     <h1>You can use Mobile</h1>
