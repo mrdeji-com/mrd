@@ -1,12 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 // import { link } from 'react-router-dom';
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
+import { app } from "../firebase";
+import emailjs from "emailjs-com";
+
+const db = app.firestore();
 
 // import { InlineWidget } from "react-calendly";
 
 const Services = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [schedule, setSchedule] = useState("");
+  const [industry, setIndustry] = useState("");
+  const [Loading, setLoading] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    await db
+      .collection("scheduledSession")
+      .add({
+        name: name,
+        email: email,
+        industry: industry,
+        description: description,
+      })
+      .then(() => {})
+      .catch((error) => {
+        console.log(error.message);
+        setLoading(false);
+      });
+    emailjs
+      .sendForm(
+        "service_32gjafv",
+        "template_gi1rfyf",
+        e.target,
+        "user_0Ba0T3HR9PKxjrMgCGth9"
+      )
+      .then(() => {
+        console.log("success");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setLoading(false);
+      });
+
+    setName("");
+    setSchedule("");
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+    setDescription("");
+    setLoading(false);
+  };
   return (
     <div class="container-fluid">
       <Navbar />
@@ -35,46 +87,144 @@ const Services = () => {
               </div>
               <div className="col-lg-5 col-md-6 form-body">
                 {/* <InlineWidget url="https://calendly.com/mrdeji/30min" /> */}
-                <div className="input">
-                  <label htmlFor="name"><img src={require("../img/Vector1.svg").default} alt="img" />Full Name <span className="required">*</span></label>
-                  <input type="text" id="name" />
-                </div>
-                <div className="input">
-                  <label htmlFor="email"><img src={require("../img/Group 4.svg").default} alt="img" />Contact Email <span className="required">*</span></label>
-                  <input type="text" id="email" />
-                </div>
-                <div className="input">
-                  <label htmlFor="number"><img src={require("../img/Vector2.svg").default} alt="img" />Phone Number <span className="required">*</span></label>
-                  <input type="text" id="number" />
-                </div>
-                <div className="input">
-                  <label htmlFor="description"><img src={require("../img/Group 6.svg").default} alt="img" />Job Description <span className="required">*</span></label>
-                  <textarea name id="description" defaultValue={""} />
-                </div>
-                <div className="input">
-                  <label htmlFor="Industry"><img src={require("../img/Group 7.svg").default} alt="img" />Industry <span className="required">*</span></label>
-                  <select name="description" id="Industry">
-                    <option value="Education/E-Learning Portals">Education/E-Learning Portals</option>
-                    <option value="	Global Trade Portals">Global Trade Portals</option>
-                    <option value="Health Management Portals">Health Management Portals</option>
-                    <option value="Administrative (Sales, HR and Accounts/Finance) Portals">Administrative
-                      (Sales, HR and Accounts/Finance) Portals</option>
-                    <option value="Internet Banking Portals">Internet Banking Portals</option>
-                    <option value="Utility Management Systems Portals">Utility Management Systems Portals
-                    </option>
-                  </select>
-                </div>
-                <div className="input">
-                  <label htmlFor="date"><img src={require("../img/Group8.svg").default} alt="img" />Schedule Date <span className="required">*</span></label>
-                  <input type="text" id="date" />
-                </div>
-                <p><b>Privacy Policy statement:</b> By filling out the Strategy Session request form, I
-                  authorize the
-                  mrdeji.com team to contact
-                  me via personalized communications about its services. See our <a href>Privacy Policy</a>
-                  for more details or to
-                  opt-out at any time</p>
-                <button>SUBMIT <img src={require("../img/Vector3.svg").default} alt="img" /></button>
+                <form onSubmit={handleSubmit}>
+                  <div className="input">
+                    <label htmlFor="name">
+                      <img
+                        src={require("../img/Vector1.svg").default}
+                        alt="img"
+                      />
+                      Full Name <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
+                    />
+                  </div>
+                  <div className="input">
+                    <label htmlFor="email">
+                      <img
+                        src={require("../img/Group 4.svg").default}
+                        alt="img"
+                      />
+                      Contact Email <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
+                    />
+                  </div>
+                  <div className="input">
+                    <label htmlFor="number">
+                      <img
+                        src={require("../img/Vector2.svg").default}
+                        alt="img"
+                      />
+                      Phone Number <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="number"
+                      name="phonenumber"
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      value={phoneNumber}
+                    />
+                  </div>
+                  <div className="input">
+                    <label htmlFor="description">
+                      <img
+                        src={require("../img/Group 6.svg").default}
+                        alt="img"
+                      />
+                      Job Description <span className="required">*</span>
+                    </label>
+                    <textarea
+                      name="description"
+                      id="description"
+                      value={description}
+                      onChange={(e) => {
+                        setDescription(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="input">
+                    <label htmlFor="Industry">
+                      <img
+                        src={require("../img/Group 7.svg").default}
+                        alt="img"
+                      />
+                      Industry <span className="required">*</span>
+                    </label>
+                    <select
+                      name="industry"
+                      id="Industry"
+                      onChange={(e) => {
+                        setIndustry(e.target.value);
+                      }}
+                    >
+                      <option value="Education/E-Learning Portals">
+                        Education/E-Learning Portals
+                      </option>
+                      <option value="	Global Trade Portals">
+                        Global Trade Portals
+                      </option>
+                      <option value="Health Management Portals">
+                        Health Management Portals
+                      </option>
+                      <option value="Administrative (Sales, HR and Accounts/Finance) Portals">
+                        Administrative (Sales, HR and Accounts/Finance) Portals
+                      </option>
+                      <option value="Internet Banking Portals">
+                        Internet Banking Portals
+                      </option>
+                      <option value="Utility Management Systems Portals">
+                        Utility Management Systems Portals
+                      </option>
+                    </select>
+                  </div>
+                  <div className="input">
+                    <label htmlFor="date">
+                      <img
+                        src={require("../img/Group8.svg").default}
+                        alt="img"
+                      />
+                      Schedule Date <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="date"
+                      value={schedule}
+                      onChange={(e) => {
+                        setSchedule(e.target.value);
+                      }}
+                      name="schedule"
+                    />
+                  </div>
+
+                  <p>
+                    <b>Privacy Policy statement:</b> By filling out the Strategy
+                    Session request form, I authorize the mrdeji.com team to
+                    contact me via personalized communications about its
+                    services. See our <a href>Privacy Policy</a>
+                    for more details or to opt-out at any time
+                  </p>
+                  {!Loading && (
+                    <button type="submit">
+                      SUBMIT{" "}
+                      <img
+                        src={require("../img/Vector3.svg").default}
+                        alt="img"
+                      />
+                    </button>
+                  )}
+                  {Loading && <button>LOADING... </button>}
+                </form>
               </div>
             </div>
           </div>
