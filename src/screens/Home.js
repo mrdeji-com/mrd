@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 
 const Home = () => {
     const [widget, setWidget] = useState(false)
+
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, []);
@@ -19,39 +23,37 @@ const Home = () => {
                 <header>
                     <div className="container">
                         <div className="header-content">
-                            <h1>Build digital products</h1>
-                            <h3>
-                                for your business to move beyond survival into exponential
-                                growth
-                            </h3>
+                            <OwlCarousel
+                                className="owl-theme"
+                                items="1"
+                                autoplay
+                                loop
+                                dots={false}
+                                autoplayTimeout="4000"
+                                responsiveRefreshRate="300"
+                                animateOut={true}
+                                animateIn="true"
+                                animateOut="true"
+                            >
+                                <div class='item'>
+                                    <h1>Build digital products</h1>
+                                    <h3>for your business to move beyond survival into exponential growth</h3>
+                                </div>
+                                <div class='item'>
+                                    <h1>Thinking Global? You can</h1>
+                                    <h3>go really global with Digital Call to Action: Launch Now</h3>
+                                </div>
+                                <div class='item'>
+                                    <h1>You can use Mobile</h1>
+                                    <h3>Web and Specialized Devices to transform your business</h3>
+                                </div>
+                            </OwlCarousel>
                             <Link
                                 to="/schedule_session"
                                 className="button"
                                 data-aos="zoom-in"
                             >
                                 Launch Now
-                            </Link>
-                        </div>
-                    </div>
-                    <div className={widget ? 'widget-active' : 'widget'} onMouseEnter={() => setWidget(true)} onMouseLeave={() => setWidget(false)}>
-                        <div className="trigger">
-                            <h1>Need Help?</h1>
-                        </div>
-                        <div className="widget-body">
-                            <h3>We're here for you.</h3>
-                            <span>
-                                <i class="fas fa-phone-alt"></i>
-                                <a href="tel:+2347006733540">Call +2347006733540</a>{" "}
-                            </span>
-                            <a href="https://chatwith.io/s/mrdeji-com" target="_blank">
-                                <span>
-                                    <i class="far fa-comment-alt"></i>Click to Chat
-                                </span>
-                            </a>
-                            <Link to="/schedule_session">
-                                <span>
-                                    <i class="far fa-calendar-alt"></i>Schedule a Meeting
-                                </span>
                             </Link>
                         </div>
                     </div>
@@ -527,6 +529,28 @@ const Home = () => {
                 </section>
             </div>
             <Footer />
+            <div className={widget ? 'widget-active' : 'widget'} onMouseEnter={() => setWidget(true)} onMouseLeave={() => setWidget(false)}>
+                <div className="trigger">
+                    <h1>Need Help?</h1>
+                </div>
+                <div className="widget-body">
+                    <h3>We're here for you.</h3>
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+2347006733540">Call +2347006733540</a>{" "}
+                    </span>
+                    <a href="https://chatwith.io/s/mrdeji-com" target="_blank">
+                        <span>
+                            <i class="far fa-comment-alt"></i>Click to Chat
+                        </span>
+                    </a>
+                    <Link to="/schedule_session">
+                        <span>
+                            <i class="far fa-calendar-alt"></i>Schedule a Meeting
+                        </span>
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };

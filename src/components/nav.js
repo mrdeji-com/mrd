@@ -46,7 +46,7 @@ const Nav = () => {
                     <li className="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Product
+                            Services
                         </a>
                         <div class="dropdown-menu mega-menu">
                             <div class="row">
