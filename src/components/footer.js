@@ -17,13 +17,9 @@ const Footer = () => {
                 <Link to="/"><img src={require("../img/LOGO 2 1.png").default} className="img-fluid" alt="brand-img" /></Link>
                 <div className="row">
                     <div className="col-lg-3 col-md-4 col-sm-12 profile">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            quis massa at dui accumsan dapibus. Duis et ultricies lacus.
-                            Quisque tempor dictum erat, eu ultricies mi vehicula eu. Donec
-                            suscipit magna quam, quis auctor sem tempor vitae. Nam viverra,
-                            diam vel pharetra suscipit, eros elit pellentesque risus, vehicula
-                            justo libero sit amet libero. Nulla eu quam ullamcorper purus sollic
-                            tempus sit amet id elit. Sed sit amet ex nisl.</p>
+                        <p>
+                            mrdeji.com is a pioneer in the development of Managed Digital Platforms (MDP) for web, mobile and specialized devices. Our aim is to use digital channels to shape the way businesses deliver products and services to their customers. Our service charge model allows our customers to pay as they earn from the digital platforms that we develop for them, hence making us an integral part of their business success. mrdeji.com team is made up of UI/UX (User Interface/User Experience) designers with strong Product Research capabilities, Frontend Development and Backend Programming expertise to bring our customers' digital platform ideas to life.
+                        </p>
                         <h3 onClick={() => setFooterModal(true)}>Read Our Privacy Policy</h3>
                         <Modal isOpen={footerModal} onRequestClose={() => setFooterModal(false)} className="footer-modal">
                             <div className="services-modal-content">

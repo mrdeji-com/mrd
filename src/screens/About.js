@@ -26,50 +26,33 @@ const About = () => {
                         <div className="row">
                             <div className="col-lg-6" data-aos="fade-right">
                                 <h1>About Us</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                    quis massa at dui accumsan dapibus. Duis et ultricies lacus.
-                                    Quisque tempor dictum erat, eu ultricies mi vehicula eu. Donec
-                                    suscipit magna quam, quis auctor sem tempor vitae. Nam viverra,
-                                    diam vel pharetra suscipit, eros elit pellentesque risus, vehicula
-                                    justo libero sit amet libero. Nulla eu quam ullamcorper purus sollic
-                                    tempus sit amet id elit. Sed sit amet ex nisl.
+                                <p>
+                                    mrdeji.com is a pioneer in the development of Managed Digital Platforms (MDP) for web, mobile and specialized devices. Our aim is to use digital channels to shape the way businesses deliver products and services to their customers. Our service charge model allows our customers to pay as they earn from the digital platforms that we develop for them, hence making us an integral part of their business success. mrdeji.com team is made up of UI/UX (User Interface/User Experience) designers with strong Product Research capabilities, Frontend Development and Backend Programming expertise to bring our customers' digital platform ideas to life. We undertake projects with passion to create unique solutions that solve complex business problems. And our approach to Product research and development enables us to fully interpret business problems and propose the right solutions that meet end-users' expectations.
                                 </p>
                             </div>
                             <div className="col-lg-6" data-aos="fade-left">
                                 <div className="row">
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
+                                    <div className="col-lg-5 col-6 individual">
                                         <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
                                             setIndex(0)
                                             setIsModalOpen(true)
                                         }} />
                                     </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
+                                    <div className="col-lg-5 col-6 individual">
                                         <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
                                             setIndex(1)
                                             setIsModalOpen(true)
                                         }} />
                                     </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
+                                    <div className="col-lg-5 col-6 individual">
                                         <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
                                             setIndex(2)
                                             setIsModalOpen(true)
                                         }} />
                                     </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
+                                    <div className="col-lg-5 col-6 individual">
                                         <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
                                             setIndex(3)
-                                            setIsModalOpen(true)
-                                        }} />
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
-                                        <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
-                                            setIndex(4)
-                                            setIsModalOpen(true)
-                                        }} />
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6 col-6 individual">
-                                        <img src={require("../img/Untitled-2.jpg").default} className="img-fluid mx-auto d-block" alt="img" onClick={() => {
-                                            setIndex(5)
                                             setIsModalOpen(true)
                                         }} />
                                     </div>
