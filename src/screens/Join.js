@@ -1,14 +1,24 @@
 import React, { useState } from "react";
-// import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
 import { app } from "../firebase";
 import emailjs from "emailjs-com";
+import Modal from 'react-modal'
+// phone number input 
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 const db = app.firestore();
 
 const Join = () => {
+  // modal 
+  const [submitModal, setSubmitModal] = useState(true)
+
+  // number 
+  const [number, setNumber] = useState()
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -138,7 +148,14 @@ const Join = () => {
                       />
                       Phone Number <span className="required">*</span>
                     </label>
-                    <input
+                    <PhoneInput
+                      id="number"
+                      placeholder="Enter phone number"
+                      value={number}
+                      onChange={setNumber}
+                      defaultCountry="NG"
+                    />
+                    {/* <input
                       type="text"
                       id="number"
                       name="phonenumber"
@@ -146,7 +163,7 @@ const Join = () => {
                       onChange={(e) => {
                         setPhoneNumber(e.target.value);
                       }}
-                    />
+                    /> */}
                   </div>
                   <div className="input">
                     <label htmlFor="Proficiency">
@@ -205,7 +222,7 @@ const Join = () => {
                   </div>
                   <input type="hidden" value={fileUrl} name="fileUrl" />
                   {!Loading && (
-                    <button type="submit">
+                    <button type="submit" className="submit-button">
                       SUBMIT{" "}
                       <img
                         src={require("../img/Vector3.svg").default}
@@ -214,6 +231,14 @@ const Join = () => {
                     </button>
                   )}
                   {Loading && <button>LOADING... </button>}
+                  <Modal isOpen={submitModal} onRequestClose={() => setSubmitModal(false)} className="form-modal">
+                    <div className="services-modal-content">
+                      <img src={require("../img/checked 1.png").default} className="img-fluid" alt="img" />
+                      <h3>Your Application was successful</h3>
+                      <p>We look forward to seeing you on our team, we would reach out to you soon via the contact you submitted.</p>
+                      <Link to="/" className="button">Go Home</Link>
+                    </div>
+                  </Modal>
                 </form>
               </div>
             </div>

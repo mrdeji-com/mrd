@@ -819,14 +819,14 @@ max-height: 900px  !important;
     font-size: 12px;
 }
 
-.form-body button {
-    /* display: inline-block; */
-    height: 40px;
+.form-body .submit-button {
+    height: 44px;
     width: 100%;
     background-color: #10757D;
     color: white;
     border: 0px;
     border-radius: 4px;
+    outline: none;
 }
 
 .form-body button img {
@@ -863,6 +863,13 @@ max-height: 900px  !important;
     outline: none;
 }
 
+.PhoneInputCountry {
+    background-color: #10757D14;
+    margin-right: 0px;
+    padding: 0px 20px;
+    border-radius: 4px;
+}
+
 .input textarea {
     padding: 10px 20px
 }
@@ -872,16 +879,7 @@ max-height: 900px  !important;
 }
 
 .input #file {
-    padding: 6px
-}
-
-.input button {
-    background-color: #F1F7F7;
-    height: 44px;
-    width: 100%;
-    border-radius: 4px;
-    outline: none;
-    color: #707070
+    padding: 6px;
 }
 
 .input button img {
@@ -950,6 +948,10 @@ max-height: 900px  !important;
 
 
 /* owl carousel  */
+.owl-carousel {
+    position: unset
+}
+
 .grow .owl-carousel .item {
     padding: 20px;
     width: 200px;
@@ -970,6 +972,43 @@ max-height: 900px  !important;
 .owl-carousel .item h3 {
     font-size: 14px;
     font-weight: 700;
+}
+
+.form-modal {
+    background-color: white;
+    max-width: 635px;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    border: 0px !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 4px 16px 0px #10757d14;
+    outline: none !important;
+}
+
+.form-modal img {
+    margin-bottom: 30px;
+}
+
+.form-modal h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.form-modal p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-modal .button {
+    background-color: #10757D;
+    color: white
+}
+
+.form-modal .button:hover {
+    background-color: #10757D;
+    color: white !important
 }
 
 
@@ -1416,6 +1455,11 @@ max-height: 900px  !important;
         width: auto
     }
 
+    /* modal  */
+    .form-modal {
+        width: 495px;
+    }
+
     /* services  */
     .services {
         height: 4020px;
@@ -1588,6 +1632,11 @@ max-height: 900px  !important;
         width: auto
     }
 
+    /* modal  */
+    .form-modal {
+        width: 370px;
+    }
+
     /* services  */
     .services {
         height: 4535px;
@@ -1629,7 +1678,7 @@ max-height: 900px  !important;
     }
 
     .services-modal-content {
-        padding: 5px;
+        padding: 15px 5px;
     }
 
     .services-modal-content h1 {
@@ -1806,6 +1855,11 @@ max-height: 900px  !important;
     .text-wrapper {
         margin-left: 0px;
         width: auto
+    }
+
+    /* modal  */
+    .form-modal {
+        width: 305px;
     }
 
     /* services  */
