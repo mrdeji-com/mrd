@@ -18,7 +18,7 @@ const db = app.firestore();
 // import { InlineWidget } from "react-calendly";
 
 const Services = () => {
-  const [submitModal, setSubmitModal] = useState(true);
+  const [submitModal, setSubmitModal] = useState(false);
 
   // date and number
   const [selectedDate, setSelectedData] = useState(null);
@@ -146,7 +146,7 @@ const Services = () => {
                       id="number"
                       placeholder="Enter phone number"
                       value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      onChange={setPhoneNumber}
                       defaultCountry="NG"
                       name="phonenumber"
                     />

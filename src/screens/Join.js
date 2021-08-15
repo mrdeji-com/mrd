@@ -14,7 +14,7 @@ const db = app.firestore();
 
 const Join = () => {
   // modal
-  const [submitModal, setSubmitModal] = useState(true);
+  const [submitModal, setSubmitModal] = useState(false);
 
   // number
   const [number, setNumber] = useState();
@@ -154,9 +154,7 @@ const Join = () => {
                       placeholder="Enter phone number"
                       value={phoneNumber}
                       name="phonenumber"
-                      onChange={(e) => {
-                        setPhoneNumber(e.target.value);
-                      }}
+                      onChange={setPhoneNumber}
                       defaultCountry="NG"
                     />
                     {/* <input

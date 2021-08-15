@@ -14,7 +14,7 @@ const db = app.firestore();
 
 const Partner = () => {
   // modal
-  const [submitModal, setSubmitModal] = useState(true);
+  const [submitModal, setSubmitModal] = useState(false);
 
   // number
   const [number, setNumber] = useState();
@@ -132,9 +132,7 @@ const Partner = () => {
                       placeholder="Enter phone number"
                       value={phoneNumber}
                       name="phonenumber"
-                      onChange={(e) => {
-                        setPhoneNumber(e.target.value);
-                      }}
+                      onChange={setPhoneNumber}
                       defaultCountry="NG"
                     />
                     {/* <input
