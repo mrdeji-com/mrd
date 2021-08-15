@@ -50,9 +50,7 @@ const Join = () => {
         proficiency: proficiency,
         phoneNumber: phoneNumber,
       })
-      .then(() => {
-        alert("Message Has Been Submitted");
-      })
+      .then(() => {})
       .catch((error) => {
         console.log(error.message);
       });
