@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
 import { app } from "../firebase";
 import emailjs from "emailjs-com";
-import Modal from 'react-modal'
-// phone number imports 
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
-// date picker 
+import Modal from "react-modal";
+// phone number imports
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+// date picker
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -18,11 +18,11 @@ const db = app.firestore();
 // import { InlineWidget } from "react-calendly";
 
 const Services = () => {
-  const [submitModal, setSubmitModal] = useState(true)
+  const [submitModal, setSubmitModal] = useState(true);
 
-  // date and number 
-  const [selectedDate, setSelectedData] = useState(null)
-  const [number, setNumber] = useState()
+  // date and number
+  const [selectedDate, setSelectedData] = useState(null);
+  const [number, setNumber] = useState();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,7 +44,7 @@ const Services = () => {
         industry: industry,
         description: description,
       })
-      .then(() => { })
+      .then(() => {})
       .catch((error) => {
         console.log(error.message);
         setLoading(false);
@@ -144,9 +144,10 @@ const Services = () => {
                     <PhoneInput
                       id="number"
                       placeholder="Enter phone number"
-                      value={number}
-                      onChange={setNumber}
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
                       defaultCountry="NG"
+                      name="phonenumber"
                     />
                     {/* <input
                       type="text"
@@ -218,12 +219,14 @@ const Services = () => {
                     </label>
                     <DatePicker
                       selected={selectedDate}
-                      onChange={date => setSelectedData(date)}
+                      onChange={(date) => setSelectedData(date)}
                       id="date"
                       placeholderText="Schedule Date"
                       dateFormat="dd/MM/yyyy"
                       minDate={new Date()}
-                      filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
+                      filterDate={(date) =>
+                        date.getDay() !== 6 && date.getDay() !== 0
+                      }
                       isClearable
                       showYearDropdown
                       scrollableMonthYearDropdown
@@ -257,12 +260,25 @@ const Services = () => {
                   )}
                   {Loading && <button>LOADING... </button>}
                   {/* submit modal  */}
-                  <Modal isOpen={submitModal} onRequestClose={() => setSubmitModal(false)} className="form-modal">
+                  <Modal
+                    isOpen={submitModal}
+                    onRequestClose={() => setSubmitModal(false)}
+                    className="form-modal"
+                  >
                     <div className="services-modal-content">
-                      <img src={require("../img/checked 1.png").default} className="img-fluid" alt="img" />
+                      <img
+                        src={require("../img/checked 1.png").default}
+                        className="img-fluid"
+                        alt="img"
+                      />
                       <h3>We are glad that you took the first step</h3>
-                      <p>Give us just 2 business days to confirmyour scheduled date and time.</p>
-                      <Link to="/" className="button">Go Home</Link>
+                      <p>
+                        Give us just 2 business days to confirmyour scheduled
+                        date and time.
+                      </p>
+                      <Link to="/" className="button">
+                        Go Home
+                      </Link>
                     </div>
                   </Modal>
                 </form>
