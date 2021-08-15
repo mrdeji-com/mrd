@@ -76,6 +76,7 @@ const Join = () => {
     setPhoneNumber("");
     setProficiency("");
     setMessage("");
+    setSubmitModal(true);
     setLoading(false);
   };
   return (

@@ -49,6 +49,7 @@ const Partner = () => {
     setMessage("");
     setPhoneNumber("");
     setName("");
+    setSubmitModal(true);
     setLoading(false);
   };
 

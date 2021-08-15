@@ -70,6 +70,7 @@ const Services = () => {
     setPhoneNumber("");
     setMessage("");
     setDescription("");
+    setSubmitModal(true);
     setLoading(false);
   };
   return (
