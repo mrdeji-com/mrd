@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import { app } from "../firebase";
 import emailjs from "emailjs-com";
 import Modal from 'react-modal'
-// phone number imports 
+// phone number input 
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 // date picker 
@@ -18,9 +18,10 @@ const db = app.firestore();
 // import { InlineWidget } from "react-calendly";
 
 const Services = () => {
+  // modal 
   const [submitModal, setSubmitModal] = useState(true)
 
-  // date and number 
+  // schedule-date and number 
   const [selectedDate, setSelectedData] = useState(null)
   const [number, setNumber] = useState()
 
