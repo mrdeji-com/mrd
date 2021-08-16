@@ -276,8 +276,16 @@ header .widget-body h3 {
     text-align: left;
 }
 
+.widget-body span:hover {
+    color:#10757D
+}
+
 .widget-body span i {
     margin-right: 13px;
+}
+
+.widget-body a:hover {
+    color: #10757D
 }
 
 /* begin  */
@@ -891,8 +899,8 @@ max-height: 900px  !important;
     width: unset
 }
 
-.form-body a, .service-information a {
-    color: #10757D
+.form-body a, .service-information a, .service-information a:hover {
+    color: #10757D !important
 }
 
 .grow {
@@ -962,6 +970,7 @@ max-height: 900px  !important;
     background-color: white;
     box-shadow: 0px 4px 16px 0px #10757D14;
     border-radius: 10px;
+    margin: 0px auto
 }
 
 .owl-carousel .item img {
@@ -1051,6 +1060,8 @@ max-height: 900px  !important;
     font-size: 16px;
     font-weight: 400;
     color: #707070;
+    text-align: justify;
+    padding-right: 15px;
 }
 
 .about h5 {
@@ -1088,7 +1099,8 @@ max-height: 900px  !important;
 .values p {
     font-size: 14px;
     font-weight: 400;
-    color: #707070
+    color: #707070;
+    text-align: justify;
 }
 
 

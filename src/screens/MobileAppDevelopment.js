@@ -40,14 +40,14 @@ const MobileAppDevelopment = () => {
                                     of the iceberg. <br /><br />
                                     Your business will develop more mobile applications that will be adaptive to specialized
                                     functions. And you may not
-                                    already have a very clear picture yet. <a href>Our Idea Mapping</a> and Mobile
+                                    already have a very clear picture yet. <Link to="/idea_mapping">Our Idea Mapping</Link> and Mobile
                                     Application Development service come in handy when
                                     your organisation need to build its next banking systems, online booking, mobile tracker,
                                     employee effectiveness and
                                     other amazing mobile applications that will pivot it into its desired growth. <br /><br />
                                     Have you rediscovered the way to deliver services to your customers or better manage your
                                     internal operations using
-                                    mobile? <a href>Speak to us today</a> to frame up this strategy into a digital plan that
+                                    mobile? <Link to="/schedule_session">Speak to us today</Link> to frame up this strategy into a digital plan that
                                     can be implemented in a mobile application.
                                 </p>
                             </div>

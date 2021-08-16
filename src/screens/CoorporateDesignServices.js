@@ -49,7 +49,7 @@ const CoorporateDesign = () => {
                                     document. Once approved by all
                                     stakeholders, other digital design and assets for your business can be built up to the exact
                                     need of your sales and
-                                    marketing endeavours. <b>Speak to our Corporate Design Services team on 07006733540</b> or <a href="">schedule a session</a> for your next Corporate Design needs.
+                                    marketing endeavours. <b>Speak to our Corporate Design Services team on 07006733540</b> or <Link to="/schedule_session">Schedule a session</Link> for your next Corporate Design needs.
                                 </p>
                             </div>
                         </div>

@@ -53,8 +53,8 @@ const DigitalContent = () => {
                                     which is rounded up with Quality Assurance and testing. You don’t want to burden yourself
                                     with brainstorming with
                                     limited horizons again, reach out to our team with multi-industry expertise to support your
-                                    next digital tech project.
-                                    <a href>Book a session here</a>
+                                    next digital tech project. <Link to="/digital_content">Book a session here</Link>
+                                    {/* <a href></a> */}
                                 </p>
                             </div>
                         </div>

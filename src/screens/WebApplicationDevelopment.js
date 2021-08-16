@@ -48,9 +48,7 @@ const WebApplicationDevelopment = () => {
                                     Application development program and we
                                     will split the elements right before your eyes and assemble it all back into a workable web
                                     application development
-                                    project that we can jointly execute and operate. <a href>Reach out to us to schedule a
-                                        Strategy
-                                        Session.</a>
+                                    project that we can jointly execute and operate. <Link to="/schedule_session">Reach out to us to schedule a Strategy Session.</Link>
                                 </p>
                             </div>
                         </div>

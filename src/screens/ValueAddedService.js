@@ -46,10 +46,9 @@ const ValueAdded = () => {
                                     established Mobile Network Operators and other partners within their ecosystem continue to
                                     drive new initiatives that
                                     provide platform for VAS players. <br /><br />
-                                    We at <a href>mrdeji.com</a> provide managed development service to facilitate your VAS
+                                    We at <Link to="/">mrdeji.com</Link> provide managed development service to facilitate your VAS
                                     enterprise
-                                    product design and operations.
-                                    <a href>Schedule a session</a> with us to establish the required partnership engagement
+                                    product design and operations. <Link to="/schedule_session">Schedule a session</Link> with us to establish the required partnership engagement
                                 </p>
                             </div>
                         </div>

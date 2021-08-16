@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
 import { app } from "../firebase";
 import emailjs from "emailjs-com";
-import Modal from 'react-modal'
-// phone number input 
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
+import Modal from "react-modal";
+// phone number input
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const db = app.firestore();
 
 const Join = () => {
-  // modal 
-  const [submitModal, setSubmitModal] = useState(true)
+  // modal
+  const [submitModal, setSubmitModal] = useState(false);
 
-  // number 
-  const [number, setNumber] = useState()
+  // number
+  const [number, setNumber] = useState();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -50,9 +50,7 @@ const Join = () => {
         proficiency: proficiency,
         phoneNumber: phoneNumber,
       })
-      .then(() => {
-        alert("Message Has Been Submitted");
-      })
+      .then(() => {})
       .catch((error) => {
         console.log(error.message);
       });
@@ -76,6 +74,7 @@ const Join = () => {
     setPhoneNumber("");
     setProficiency("");
     setMessage("");
+    setSubmitModal(true);
     setLoading(false);
   };
   return (
@@ -151,8 +150,9 @@ const Join = () => {
                     <PhoneInput
                       id="number"
                       placeholder="Enter phone number"
-                      value={number}
-                      onChange={setNumber}
+                      value={phoneNumber}
+                      name="phonenumber"
+                      onChange={setPhoneNumber}
                       defaultCountry="NG"
                     />
                     {/* <input
@@ -231,12 +231,25 @@ const Join = () => {
                     </button>
                   )}
                   {Loading && <button>LOADING... </button>}
-                  <Modal isOpen={submitModal} onRequestClose={() => setSubmitModal(false)} className="form-modal">
+                  <Modal
+                    isOpen={submitModal}
+                    onRequestClose={() => setSubmitModal(false)}
+                    className="form-modal"
+                  >
                     <div className="services-modal-content">
-                      <img src={require("../img/checked 1.png").default} className="img-fluid" alt="img" />
+                      <img
+                        src={require("../img/checked 1.png").default}
+                        className="img-fluid"
+                        alt="img"
+                      />
                       <h3>Your Application was successful</h3>
-                      <p>We look forward to seeing you on our team, we would reach out to you soon via the contact you submitted.</p>
-                      <Link to="/" className="button">Go Home</Link>
+                      <p>
+                        We look forward to seeing you on our team, we would
+                        reach out to you soon via the contact you submitted.
+                      </p>
+                      <Link to="/" className="button">
+                        Go Home
+                      </Link>
                     </div>
                   </Modal>
                 </form>

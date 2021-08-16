@@ -47,7 +47,7 @@ const SecurityServices = () => {
                                     information and integration with
                                     third-party systems. You cannot overemphasize the need for our team to collaborate with
                                     yours at the stage of
-                                    understanding your business’ threat landscape. <a href>Reach out to us</a> to schedule a
+                                    understanding your business’ threat landscape. <Link to="/schedule_session">Reach out to us</Link> to schedule a
                                     session to
                                     identify current gaps in your
                                     integration systems to determine the best next line of action

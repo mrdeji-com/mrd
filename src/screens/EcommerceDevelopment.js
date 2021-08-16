@@ -46,7 +46,7 @@ const EcommerceDevelopment = () => {
                                     interests. If you have ever
                                     sold online before, put a mark on your records, employ us and then set new targets. This is
                                     one way to measure our
-                                    effectiveness. <a href>Schedule a session with us today</a>
+                                    effectiveness. <Link to="/schedule_session">Schedule a session with us today</Link>
                                 </p>
                             </div>
                         </div>

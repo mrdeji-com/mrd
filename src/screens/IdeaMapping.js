@@ -41,7 +41,7 @@ const IdeaMapping = () => {
                                     experience to come up with
                                     transformational solutions that continue to influence and impact generations before and
                                     after us. Join the league of
-                                    these champions by <a href>reaching out to us</a> with your digital tech idea and we will
+                                    these champions by <Link to="/schedule_session">reaching out to us</Link> with your digital tech idea and we will
                                     work with you
                                     to develop all the building
                                     blocks. <br /><br />

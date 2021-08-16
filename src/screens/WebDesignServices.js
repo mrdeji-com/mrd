@@ -55,8 +55,7 @@ const WebDesign = () => {
                                     reflection of your business’
                                     dynamism and so requires constant reorganization and adaptation to new user requirements and
                                     strategies. <b>Speak to our
-                                        Website Design Program Management team on 07006733540</b> or <a href>schedule a
-                                            session</a> for your next Web Design Program.
+                                        Website Design Program Management team on 07006733540</b> or <Link to="/schedule_session">schedule a session</Link> for your next Web Design Program.
                                 </p>
                             </div>
                         </div>

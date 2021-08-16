@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Modal from 'react-modal'
-// phone number input 
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
-import { Link } from 'react-router-dom';
+import Modal from "react-modal";
+// phone number input
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import { Link } from "react-router-dom";
 import Navbar from "../components/nav";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
@@ -13,11 +13,11 @@ const db = app.firestore();
 // import { InlineWidget } from "react-calendly";
 
 const Partner = () => {
-  // modal 
-  const [submitModal, setSubmitModal] = useState(true)
+  // modal
+  const [submitModal, setSubmitModal] = useState(false);
 
-  // number 
-  const [number, setNumber] = useState()
+  // number
+  const [number, setNumber] = useState();
 
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
@@ -41,7 +41,7 @@ const Partner = () => {
         message: message,
         phoneNumber: phoneNumber,
       })
-      .then(() => { })
+      .then(() => {})
       .catch((error) => {
         console.log(error.message);
       });
@@ -49,6 +49,7 @@ const Partner = () => {
     setMessage("");
     setPhoneNumber("");
     setName("");
+    setSubmitModal(true);
     setLoading(false);
   };
 
@@ -129,8 +130,9 @@ const Partner = () => {
                     <PhoneInput
                       id="number"
                       placeholder="Enter phone number"
-                      value={number}
-                      onChange={setNumber}
+                      value={phoneNumber}
+                      name="phonenumber"
+                      onChange={setPhoneNumber}
                       defaultCountry="NG"
                     />
                     {/* <input
@@ -320,12 +322,25 @@ const Partner = () => {
                     </button>
                   )}
                   {Loading && <button>LOADING... </button>}
-                  <Modal isOpen={submitModal} onRequestClose={() => setSubmitModal(false)} className="form-modal">
+                  <Modal
+                    isOpen={submitModal}
+                    onRequestClose={() => setSubmitModal(false)}
+                    className="form-modal"
+                  >
                     <div className="services-modal-content">
-                      <img src={require("../img/checked 1.png").default} className="img-fluid" alt="img" />
+                      <img
+                        src={require("../img/checked 1.png").default}
+                        className="img-fluid"
+                        alt="img"
+                      />
                       <h3>Thank you for showing interest in us!</h3>
-                      <p>We have received your details and we would reach out to you from the contact details you submitted.</p>
-                      <Link to="/services" className="button">See How we help grow Businesses</Link>
+                      <p>
+                        We have received your details and we would reach out to
+                        you from the contact details you submitted.
+                      </p>
+                      <Link to="/services" className="button">
+                        See How we help grow Businesses
+                      </Link>
                     </div>
                   </Modal>
                 </form>
