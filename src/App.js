@@ -21,7 +21,6 @@ import './App.css';
 
 function App() {
   return (
-    <div className="route-wrappers">
       <Router>
         <ScrollToTop />
         <Route path='/' exact component={Home} />
@@ -41,7 +40,6 @@ function App() {
         <Route path='/join' component={Join} />
         <Route path='/partner' component={Partner} />
       </Router>
-    </div>
   );
 }
 

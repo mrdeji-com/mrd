@@ -163,7 +163,7 @@ const Services = () => {
                         src={require("../img/Group 6.svg").default}
                         alt="img"
                       />
-                      Job Description <span className="required">*</span>
+                      Job Title
                     </label>
                     <textarea
                       name="description"
@@ -180,7 +180,7 @@ const Services = () => {
                         src={require("../img/Group 7.svg").default}
                         alt="img"
                       />
-                      Industry <span className="required">*</span>
+                      Service Required <span className="required">*</span>
                     </label>
                     <select
                       name="industry"

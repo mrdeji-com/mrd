@@ -45,8 +45,9 @@ class Carousel extends Component {
                     pullDrag
                     freeDrag
                     dots={false}
+                    autoplay
+                    autoplayTimeout="3000"
                     responsive={this.state.responsive} >
-
                     <Link to="/digital_content">
                         <div class='item'>
                             <img src={require("../img/content4.png").default} alt="alt" className="img-fluid" />

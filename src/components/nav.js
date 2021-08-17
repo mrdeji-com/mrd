@@ -18,20 +18,20 @@ const Nav = () => {
         changeNumber()
     })
 
-    window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 100) {
-            document.querySelector('.logo').style.height = "40px"
-            document.querySelector('.navbar').style.opacity = "0.97"
-        } else {
-            document.querySelector('.logo').style.height = "unset"
-            document.querySelector('.navbar').style.opacity = "unset"
-        }
-    });
+    // window.addEventListener("scroll", () => {
+    //     if (window.pageYOffset > 100) {
+    //         document.querySelector('.logo').style.height = "40px"
+    //         document.querySelector('.navbar').style.opacity = "0.97"
+    //     } else {
+    //         document.querySelector('.logo').style.height = "65px"
+    //         document.querySelector('.navbar').style.opacity = "unset"
+    //     }
+    // });
 
     return (
         <nav className="navbar fixed-top navbar-expand-lg" id="nav">
             <Link to="/" className="navbar-brand">
-                <img src={require("../img/LOGO 1.png").default} alt="brand-img" className="logo" />
+                <img src={require("../img/Logo_png_.png").default} alt="brand-img" className="logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />

@@ -10,6 +10,18 @@ import Footer from "../components/footer";
 
 const Home = () => {
     const [widget, setWidget] = useState(false)
+    const [screenSize, setScreenSize] = useState(window.innerWidth)
+
+    const handleScreenSize = () => {
+        setScreenSize(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleScreenSize)
+        return () => {
+            window.removeEventListener('resize', handleScreenSize)
+        }
+    })
 
     useEffect(() => {
         Aos.init({ duration: 1000 });
@@ -19,6 +31,7 @@ const Home = () => {
         <div class="container-fluid">
             <Navbar />
             <div>
+
                 {/* header  */}
                 <header>
                     <div className="container">
@@ -61,10 +74,10 @@ const Home = () => {
                 <section className="begin">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-1 col-md-0 col-sm-0"></div>
+                            {/* <div className="col-lg-1 col-0"></div> */}
                             <div
                                 data-aos="fade-right"
-                                className="col-lg-6 col-md-6 col-sm-6 p-100"
+                                className="col-lg-6 col-md-6 col-sm-6 col-12 p-100"
                             >
                                 <div className="center-content">
                                     <h1>
@@ -91,7 +104,8 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div data-aos="fade-left" className="col-lg-5 col-md-6 col-sm-6">
+                            <div data-aos="fade-left" className="col-lg-6 col-md-6 col-sm-6 col-12">
+                                {/* {screenSize } */}
                                 <img
                                     src={require("../img/7mvphy38 1.png").default}
                                     className="img-fluid mx-auto d-block"
@@ -488,7 +502,6 @@ const Home = () => {
                                         <Link to="/join" data-aos="zoom-in" className="button">
                                             Join Our Team
                                         </Link>
-                                        {/* <a href className="button" >Join Our Team</a> */}
                                     </div>
                                 </div>
                             </div>
